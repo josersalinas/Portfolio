@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jose Roberto Salinas — Technical Work</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0F1216;
+    --surface:#161A20;
+    --surface-2:#1D222A;
+    --line:#2A3038;
+    --text:#E9ECF0;
+    --text-dim:#9AA3AF;
+    --mint:#5FD4C0;
+    --amber:#E8A33D;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:var(--ink);
+    color:var(--text);
+    font-family:'Source Serif 4', serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3, .display{
+    font-family:'Space Grotesk', sans-serif;
+    letter-spacing:-0.01em;
+  }
+  .mono{ font-family:'IBM Plex Mono', monospace; }
+  a{ color:inherit; }
+
+  .wrap{
+    max-width:920px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  /* ---------- Nav ---------- */
+  nav{
+    padding:28px 0 0;
+  }
+  nav .wrap{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  .nav-name{
+    font-size:15px;
+    font-weight:600;
+  }
+  .nav-links{
+    display:flex;
+    gap:24px;
+    font-size:14px;
+    color:var(--text-dim);
+  }
+  .nav-links a{ text-decoration:none; }
+  .nav-links a:hover{ color:var(--mint); }
+
+  /* ---------- Hero ---------- */
+  header.hero{
+    padding:72px 0 56px;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:48px;
+    align-items:center;
+  }
+  .hero h1{
+    font-size:44px;
+    line-height:1.12;
+    font-weight:600;
+    max-width:11ch;
+  }
+  .hero p.lede{
+    margin-top:20px;
+    font-size:18px;
+    color:var(--text-dim);
+    max-width:44ch;
+  }
+  .hero .role{
+    margin-top:24px;
+    font-size:14px;
+    color:var(--mint);
+    font-family:'IBM Plex Mono', monospace;
+  }
+
+  /* fake chat/terminal mockup */
+  .console{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:10px;
+    overflow:hidden;
+  }
+  .console-bar{
+    display:flex;
+    gap:6px;
+    padding:12px 14px;
+    border-bottom:1px solid var(--line);
+    background:var(--surface-2);
+  }
+  .console-bar span{
+    width:9px; height:9px; border-radius:50%;
+    background:#3A4149;
+  }
+  .console-body{
+    padding:18px 16px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    color:var(--text-dim);
+  }
+  .console-body .line{ margin-bottom:12px; }
+  .console-body .tag{ color:var(--amber); }
+  .console-body .out{ color:var(--mint); }
+  .console-body .user-line{ color:var(--text); }
+
+  /* ---------- Section shared ---------- */
+  section{ padding:52px 0; border-top:1px solid var(--line); }
+  section h2{
+    font-size:13px;
+    color:var(--text-dim);
+    font-family:'IBM Plex Mono', monospace;
+    font-weight:400;
+    margin-bottom:28px;
+  }
+
+  /* ---------- About / skills ---------- */
+  .about-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:40px;
+  }
+  .about-grid p{ font-size:17px; max-width:52ch; }
+  .about-grid p + p{ margin-top:16px; }
+
+  .skill-group{ margin-bottom:20px; }
+  .skill-group .label{
+    font-size:12px;
+    color:var(--text-dim);
+    font-family:'IBM Plex Mono', monospace;
+    margin-bottom:8px;
+  }
+  .skill-group .items{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    font-family:'Space Grotesk', sans-serif;
+    font-size:14px;
+  }
+  .skill-group .items span{
+    background:var(--surface);
+    border:1px solid var(--line);
+    padding:5px 10px;
+    border-radius:6px;
+  }
+
+  /* ---------- Project ---------- */
+  .project{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:32px;
+  }
+  .project-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:20px;
+    flex-wrap:wrap;
+  }
+  .project-head h3{
+    font-size:24px;
+    font-weight:600;
+  }
+  .project-head .date{
+    font-size:13px;
+    color:var(--text-dim);
+    font-family:'IBM Plex Mono', monospace;
+    white-space:nowrap;
+    padding-top:6px;
+  }
+  .project p.desc{
+    margin-top:14px;
+    color:var(--text-dim);
+    font-size:16px;
+    max-width:60ch;
+  }
+  .stack-row{
+    margin-top:22px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .stack-row span{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:var(--amber);
+    border:1px solid #4A3A20;
+    background:rgba(232,163,61,0.08);
+    padding:4px 9px;
+    border-radius:5px;
+  }
+  .build-notes{
+    margin-top:24px;
+    border-top:1px solid var(--line);
+    padding-top:20px;
+  }
+  .build-notes .label{
+    font-size:12px;
+    color:var(--text-dim);
+    font-family:'IBM Plex Mono', monospace;
+    margin-bottom:10px;
+  }
+  .build-notes ul{
+    list-style:none;
+  }
+  .build-notes li{
+    font-size:15px;
+    color:var(--text);
+    padding-left:18px;
+    position:relative;
+    margin-bottom:8px;
+  }
+  .build-notes li::before{
+    content:"—";
+    position:absolute;
+    left:0;
+    color:var(--mint);
+  }
+  .project-links{
+    margin-top:24px;
+    display:flex;
+    gap:20px;
+  }
+  .project-links a{
+    font-size:14px;
+    text-decoration:none;
+    color:var(--mint);
+    border-bottom:1px solid rgba(95,212,192,0.4);
+    padding-bottom:2px;
+  }
+  .project-links a:hover{ border-color:var(--mint); }
+
+  /* ---------- Experience ---------- */
+  .exp-row{
+    display:grid;
+    grid-template-columns:200px 1fr;
+    gap:24px;
+    padding:22px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .exp-row:last-child{ border-bottom:none; }
+  .exp-row .when{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    color:var(--text-dim);
+  }
+  .exp-row h4{
+    font-family:'Space Grotesk', sans-serif;
+    font-size:17px;
+    font-weight:600;
+  }
+  .exp-row .org{
+    color:var(--mint);
+    font-size:14px;
+    margin-top:2px;
+  }
+  .exp-row p{
+    margin-top:10px;
+    font-size:15px;
+    color:var(--text-dim);
+    max-width:56ch;
+  }
+
+  /* ---------- Contact ---------- */
+  .contact-links{
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+  }
+  .contact-links a{
+    text-decoration:none;
+    font-family:'Space Grotesk', sans-serif;
+    font-size:16px;
+    background:var(--surface);
+    border:1px solid var(--line);
+    padding:12px 20px;
+    border-radius:8px;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+  }
+  .contact-links a:hover{
+    border-color:var(--mint);
+    color:var(--mint);
+  }
+
+  footer{
+    padding:36px 0 60px;
+    color:var(--text-dim);
+    font-size:13px;
+    font-family:'IBM Plex Mono', monospace;
+  }
+
+  @media (max-width:720px){
+    .hero-grid{ grid-template-columns:1fr; }
+    .hero h1{ font-size:34px; max-width:none; }
+    .about-grid{ grid-template-columns:1fr; }
+    .exp-row{ grid-template-columns:1fr; gap:6px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="nav-name">Jose Roberto Salinas</div>
+    <div class="nav-links">
+      <a href="#project">Project</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="role">Business Analytics · Applied AI</div>
+      <h1>I build small systems that talk to language models.</h1>
+      <p class="lede">Riverside, CA — UC Riverside '26. I train and evaluate AI systems for a living, and I ship the kind of projects most people only talk about.</p>
+    </div>
+    <div class="console">
+      <div class="console-bar"><span></span><span></span><span></span></div>
+      <div class="console-body">
+        <div class="line user-line">&gt; user: "when's my next assignment due?"</div>
+        <div class="line"><span class="tag">[node backend]</span> query → PostgreSQL</div>
+        <div class="line"><span class="tag">[OpenAI API]</span> generate response</div>
+        <div class="line out">&lt; assistant: pulled from your saved queries — due Thursday.</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap about-grid">
+    <div>
+      <h2>ABOUT</h2>
+      <p>I evaluate AI-generated responses for a living — scoring instruction-following, tone, and reasoning quality against structured criteria, and writing evidence-backed feedback that explains exactly why an answer works or doesn't.</p>
+      <p>Outside of that, I build things: a full-stack AI assistant with its own database, a decade-long YouTube channel with 10M+ views, and a growing list of Anthropic technical coursework I've worked through on my own time.</p>
+    </div>
+    <div>
+      <div class="skill-group">
+        <div class="label">LANGUAGES &amp; TOOLS</div>
+        <div class="items">
+          <span>Python</span><span>JavaScript</span><span>SQL</span><span>Node.js</span>
+          <span>PostgreSQL</span><span>OpenAI API</span><span>Anthropic API</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="label">SPOKEN</div>
+        <div class="items">
+          <span>English</span><span>Spanish</span><span>French</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="project">
+  <div class="wrap">
+    <h2>PROJECT</h2>
+    <div class="project">
+      <div class="project-head">
+        <h3>UCR AI Assistant</h3>
+        <div class="date mono">April 2026</div>
+      </div>
+      <p class="desc">A full-stack assistant built for UC Riverside students: a Node.js backend integrates the OpenAI API to generate personalized responses to student queries, backed by a PostgreSQL database that stores and retrieves queries, responses, and timestamps.</p>
+      <div class="stack-row">
+        <span>Node.js</span><span>OpenAI API</span><span>PostgreSQL</span><span>REST</span>
+      </div>
+      <div class="build-notes">
+        <div class="label">WHAT I ACTUALLY DEBUGGED</div>
+        <ul>
+          <li>Server port conflicts blocking local development</li>
+          <li>API authentication failures between backend and OpenAI</li>
+          <li>Response parsing errors in the data flow between DB and client</li>
+          <li>Designed the relational schema from scratch to support structured query/response history</li>
+        </ul>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/josersalinas" target="_blank">GitHub — josersalinas</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <h2>EXPERIENCE</h2>
+
+    <div class="exp-row">
+      <div class="when">Nov 2025 — Present</div>
+      <div>
+        <h4>AI Trainer</h4>
+        <div class="org">Handshake AI</div>
+        <p>Evaluate AI-generated responses to real user prompts against structured criteria — instruction-following, clarity, tone, personalization, formatting — and deliver evidence-based feedback that distinguishes substantive reasoning issues from surface-level presentation problems.</p>
+      </div>
+    </div>
+
+    <div class="exp-row">
+      <div class="when">May 2017 — Present</div>
+      <div>
+        <h4>Content Creator</h4>
+        <div class="org">YouTube</div>
+        <p>Built a channel reaching 10M+ lifetime views and $6K+ in ad revenue, using audience and engagement analytics to guide content decisions.</p>
+      </div>
+    </div>
+
+    <div class="exp-row">
+      <div class="when">2026</div>
+      <div>
+        <h4>Anthropic Technical Coursework</h4>
+        <div class="org">Anthropic</div>
+        <p>Claude with the Anthropic API, Introduction to Model Context Protocol, Claude Code in Action, Introduction to Agent Skills.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>CONTACT</h2>
+    <div class="contact-links">
+      <a href="mailto:salinasmemory10@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/josersalinas/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/josersalinas" target="_blank">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Riverside, California — built and maintained by Jose Roberto Salinas</div>
+</footer>
+
+</body>
+</html>
