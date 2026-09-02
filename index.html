@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jose Roberto Salinas — Technical Work</title>
+<title>Jose Roberto Salinas | AI Evaluation & Applied AI</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -320,28 +320,28 @@
 <nav>
   <div class="wrap">
     <div class="nav-name">Jose Roberto Salinas</div>
-    <div class="nav-links">
-      <a href="#project">Project</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </div>
+<div class="nav-links">
+  <a href="#project">Project</a>
+  <a href="#experience">Experience</a>
+  <a href="#education">Education</a>
+  <a href="#contact">Contact</a>
+</div>  </div>
 </nav>
 
 <header class="hero">
   <div class="wrap hero-grid">
     <div>
-      <div class="role">Business Analytics · Applied AI</div>
-      <h1>I build small systems that talk to language models.</h1>
-      <p class="lede">Riverside, CA — UC Riverside '26. I train and evaluate AI systems for a living, and I ship the kind of projects most people only talk about.</p>
+      <div class="role">AI Evaluation · Applied AI · Business Analytics</div>
+      <h1>I evaluate AI systems and build tools around language models.</h1>
+      <p class="lede">Recent UC Riverside graduate in Business Analytics. I evaluate AI systems professionally and build applied AI tools with language models, APIs, and databases.</p>
     </div>
     <div class="console">
       <div class="console-bar"><span></span><span></span><span></span></div>
       <div class="console-body">
-        <div class="line user-line">&gt; user: "when's my next assignment due?"</div>
-        <div class="line"><span class="tag">[node backend]</span> query → PostgreSQL</div>
+        <div class="line user-line">&gt; user: "How should I prepare for a career in AI?"</div>
+        <div class="line"><span class="tag">[node backend]</span> POST /question</div>
         <div class="line"><span class="tag">[OpenAI API]</span> generate response</div>
-        <div class="line out">&lt; assistant: pulled from your saved queries — due Thursday.</div>
+        <div class="line out">&lt; assistant: personalized guidance generated and saved.</div>
       </div>
     </div>
   </div>
@@ -351,21 +351,21 @@
   <div class="wrap about-grid">
     <div>
       <h2>ABOUT</h2>
-      <p>I evaluate AI-generated responses for a living — scoring instruction-following, tone, and reasoning quality against structured criteria, and writing evidence-backed feedback that explains exactly why an answer works or doesn't.</p>
-      <p>Outside of that, I build things: a full-stack AI assistant with its own database, a decade-long YouTube channel with 10M+ views, and a growing list of Anthropic technical coursework I've worked through on my own time.</p>
+      <p>I evaluate AI-generated responses against structured criteria such as instruction following, clarity, tone, personalization, and formatting, then write evidence-based feedback explaining what worked, what failed, and why.</p>
+      <p>Outside of work, I build applied AI projects and keep expanding my technical foundation through independent study. That includes a full-stack AI assistant, Anthropic technical coursework, and a YouTube channel that has reached 10M+ lifetime views.</p>
     </div>
     <div>
       <div class="skill-group">
-        <div class="label">LANGUAGES &amp; TOOLS</div>
+        <div class="label">TECHNICAL</div>
         <div class="items">
           <span>Python</span><span>JavaScript</span><span>SQL</span><span>Node.js</span>
-          <span>PostgreSQL</span><span>OpenAI API</span><span>Anthropic API</span>
+          <span>Express</span><span>PostgreSQL</span><span>OpenAI API</span><span>Anthropic API</span>
         </div>
       </div>
       <div class="skill-group">
-        <div class="label">SPOKEN</div>
+        <div class="label">LANGUAGES</div>
         <div class="items">
-          <span>English</span><span>Spanish</span><span>French</span>
+          <span>English (Native)</span><span>Spanish (Native)</span><span>French (Proficient)</span>
         </div>
       </div>
     </div>
@@ -377,24 +377,33 @@
     <h2>PROJECT</h2>
     <div class="project">
       <div class="project-head">
-        <h3>UCR AI Assistant</h3>
+        <h3>UCR AI Advisor</h3>
         <div class="date mono">April 2026</div>
       </div>
-      <p class="desc">A full-stack assistant built for UC Riverside students: a Node.js backend integrates the OpenAI API to generate personalized responses to student queries, backed by a PostgreSQL database that stores and retrieves queries, responses, and timestamps.</p>
+<p class="desc">A full-stack AI advisor for UC Riverside students. The Node.js and Express backend sends student questions to the OpenAI API and stores questions, responses, and timestamps in PostgreSQL.</p>
+      <div style="margin-top:22px;">
+  <img
+    src="https://github.com/user-attachments/assets/57cdb8db-decb-4f0e-af8f-0e4ebc6ffae5"
+    alt="UCR AI Advisor interface"
+    style="width:100%; border-radius:8px; border:1px solid var(--line);"
+  >
+</div>
       <div class="stack-row">
-        <span>Node.js</span><span>OpenAI API</span><span>PostgreSQL</span><span>REST</span>
+        <span>Node.js</span><span>Express</span><span>OpenAI API</span><span>PostgreSQL</span><span>REST API</span>
       </div>
       <div class="build-notes">
-        <div class="label">WHAT I ACTUALLY DEBUGGED</div>
+        <div class="label">IMPLEMENTATION &amp; DEBUGGING</div>
         <ul>
-          <li>Server port conflicts blocking local development</li>
-          <li>API authentication failures between backend and OpenAI</li>
-          <li>Response parsing errors in the data flow between DB and client</li>
-          <li>Designed the relational schema from scratch to support structured query/response history</li>
+          <li>Configured environment variables and database connectivity for local and deployed environments</li>
+          <li>Integrated and debugged OpenAI API authentication and response handling</li>
+          <li>Debugged response parsing and data flow between the backend, database, and client</li>
+          <li>Designed a PostgreSQL schema to store and retrieve user questions, AI responses, and timestamps</li>
         </ul>
       </div>
       <div class="project-links">
-        <a href="https://github.com/josersalinas" target="_blank">GitHub — josersalinas</a>
+  <a href="https://ucr-ai-advisor.onrender.com" target="_blank">Live Demo</a>
+  <a href="https://github.com/josersalinas/ucr-ai-advisor" target="_blank">Source Code</a>
+</div>
       </div>
     </div>
   </div>
@@ -409,7 +418,7 @@
       <div>
         <h4>AI Trainer</h4>
         <div class="org">Handshake AI</div>
-        <p>Evaluate AI-generated responses to real user prompts against structured criteria — instruction-following, clarity, tone, personalization, formatting — and deliver evidence-based feedback that distinguishes substantive reasoning issues from surface-level presentation problems.</p>
+        <p>Evaluate AI-generated responses to real user prompts using structured criteria including instruction following, clarity, tone, personalization, and formatting. Provide evidence-based feedback that identifies substantive reasoning issues and distinguishes them from presentation problems.</p>
       </div>
     </div>
 
@@ -418,7 +427,7 @@
       <div>
         <h4>Content Creator</h4>
         <div class="org">YouTube</div>
-        <p>Built a channel reaching 10M+ lifetime views and $6K+ in ad revenue, using audience and engagement analytics to guide content decisions.</p>
+        <p>Built a YouTube channel reaching 10M+ lifetime views and generating $6K+ in advertising revenue. Used audience and engagement analytics to guide future content decisions.</p>
       </div>
     </div>
 
@@ -427,12 +436,27 @@
       <div>
         <h4>Anthropic Technical Coursework</h4>
         <div class="org">Anthropic</div>
-        <p>Claude with the Anthropic API, Introduction to Model Context Protocol, Claude Code in Action, Introduction to Agent Skills.</p>
+        <p>Completed technical coursework covering the Anthropic API, Model Context Protocol, Claude Code, and agent skills, with a focus on building and understanding modern AI tooling.</p>
       </div>
     </div>
   </div>
 </section>
 
+<section id="education">
+  <div class="wrap">
+    <h2>EDUCATION</h2>
+
+    <div class="exp-row">
+      <div class="when">2022 - 2026</div>
+      <div>
+        <h4>University of California, Riverside</h4>
+        <div class="org">B.S. Business Administration, Business Analytics</div>
+        <p>Coursework included Information Technology Management, Business Analytics, and Quantitative Decision Models.</p>
+      </div>
+    </div>
+  </div>
+</section>
+  
 <section id="contact">
   <div class="wrap">
     <h2>CONTACT</h2>
@@ -445,7 +469,7 @@
 </section>
 
 <footer>
-  <div class="wrap">Riverside, California — built and maintained by Jose Roberto Salinas</div>
+  <div class="wrap">Riverside, California · Built by Jose Roberto Salinas</div>
 </footer>
 
 </body>
