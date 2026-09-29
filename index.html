@@ -307,11 +307,22 @@
   }
 
   @media (max-width:720px){
-    .hero-grid{ grid-template-columns:1fr; }
-    .hero h1{ font-size:34px; max-width:none; }
-    .about-grid{ grid-template-columns:1fr; }
-    .exp-row{ grid-template-columns:1fr; gap:6px; }
+  .hero-grid{ grid-template-columns:1fr; }
+  .hero h1{ font-size:34px; max-width:none; }
+  .about-grid{ grid-template-columns:1fr; }
+  .exp-row{ grid-template-columns:1fr; gap:6px; }
+
+  nav .wrap{
+    align-items:flex-start;
+    gap:16px;
   }
+
+  .nav-links{
+    flex-wrap:wrap;
+    justify-content:flex-end;
+    gap:10px 16px;
+  }
+}
 </style>
 </head>
 <body>
@@ -373,6 +384,14 @@
     <span>PostgreSQL</span><span>REST APIs</span><span>OpenAI API</span>
   </div>
 </div> 
+      <div class="skill-group">
+  <div class="label">LANGUAGES</div>
+  <div class="items">
+    <span>English (Native)</span>
+    <span>Spanish (Native)</span>
+    <span>French (Proficient)</span>
+  </div>
+</div>
     </div>
   </div>
 </section>
@@ -462,7 +481,7 @@
       <div>
         <h4>University of California, Riverside</h4>
         <div class="org">B.S. Business Administration, Business Analytics</div>
-<p>Coursework included Production &amp; Operations Management, Business Analytics, Quantitative Decision Models, and Information Technology Management (Python)</p> 
+<p>Coursework included Production &amp; Operations Management, Business Analytics, Quantitative Decision Models, and Information Technology Management (Python).</p> 
       </div>
     </div>
   </div>
